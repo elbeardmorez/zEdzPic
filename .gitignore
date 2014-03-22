@@ -3,3 +3,12 @@ zedzpic
 *~
 *.swp
 *.orig
+configure
+config.h
+config.log
+config.status
+aclocal.m4
+autom4te.cache/
+*Makefile
+*.deps/
+depcomp

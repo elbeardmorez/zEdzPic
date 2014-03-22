@@ -14,7 +14,7 @@ int main(int argc, char **argv)
   /* Create new GtkBuilder object */
   builder = gtk_builder_new();
   /* load ui file */
-  if(!gtk_builder_add_from_file(builder, "./ui.ui", &error))
+  if(!gtk_builder_add_from_file(builder, "./src/ui.ui", &error))
   {
     g_warning("%s", error->message);
     g_free(error);

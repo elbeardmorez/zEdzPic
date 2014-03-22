@@ -1,0 +1,15 @@
+
+include config.h
+
+PRGNAM ?= "zedzpic"
+CC = gcc
+CC_FLAGS = -O0 -ggdb3 -Wall -Wno-unused-variable
+CFLAGS += $(GTK_CFLAGS)
+LIBS += $(GTK_LIBS)
+
+all:
+	@echo "# compiling $*"
+	$(CC) $(CC_FLAGS) $(CFLAGS) -o $(PRGNAM) $(LIBS) ./src/app.c 
+
+clean:
+	rm $(PRGNAM)
