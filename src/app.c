@@ -30,6 +30,7 @@ int main(int argc, char **argv)
 
   /* connect signals */
   g_signal_connect(window, "destroy", G_CALLBACK (ze_close), NULL);
+  g_signal_connect(window, "key_press_event", G_CALLBACK(ze_key_press), NULL);
   bt = (GtkButton *)gtk_builder_get_object(builder, "bt_browse");
   g_signal_connect(bt, "clicked", G_CALLBACK (ze_browse), NULL);
   bt = (GtkButton *)gtk_builder_get_object(builder, "bt_load");
